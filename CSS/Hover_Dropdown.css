@@ -1,0 +1,58 @@
+*{
+    padding: 0 ;
+    margin: 0;
+    background: orangered;
+    /* height: 100vh; */
+}
+
+.wrapper{
+    width: 75%;
+    border: 1px solid black;
+    margin: 50px auto;
+    height: 500px;
+}
+.logo{
+    float: left;
+    color: white;
+    font-size: 150%;
+}
+.Menu-Button{
+    padding: 10px 5px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    border: none;
+    box-shadow: 2px 2px 12px 10px whitesmoke;
+    border-radius: 10px;
+}
+.Menu{
+    position: relative;
+    display: inline-block;
+    top: 40px;
+    right: 140px;
+    float:right;
+}
+.Dropdown-Menu{
+    display: none;
+    position: absolute;
+    min-width: 180px;
+    background-color: #fff;
+    border: 1px solid whitesmoke;
+    top: 100px;
+    z-index: 1;
+
+}
+.Dropdown-Menu a{
+    text-decoration: none;
+    color: black;
+    background: transparent;
+    font-size: larger;
+    display: block;
+    padding: 10px;
+}
+.Dropdown-Menu a:hover{
+    background-color: rgb(189, 182, 182);
+}
+.Menu:hover  .Dropdown-Menu{
+    display: block;
+}

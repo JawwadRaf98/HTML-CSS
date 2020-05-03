@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* sticky navbar start */
+
+#navbar {
+    background-color: rgb(236, 230, 230);
+  }
+  
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+/* sticky navbar end */
+
+
+/* navbar logo */
+
+.navbar_logo img{
+    border: 1px solid black;
+    margin-left: 25px;
+    width: 200px;
+    height: 70px;
+}
+
+/* navbar_menu */
+.navbar_menu{
+    
+    border: 1px solid black;
+}
+.navbar_menu ul {
+    text-transform: capitalize;
+    list-style: none;
+    display: inline-flex; /* inline-flex*/
+}
+.navbar_menu ul li{
+    /* border: 1px solid black; */
+    padding:  5px 10px;
+    border-radius: 100px;
+}
+.navbar_menu ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+}
+
+.active_li {
+    background-color: blue;
+    font-weight: bold;
+}
+.active_li a{
+    color: white !important;
+}
+.navbar_menu ul li:hover{
+    background-color: blue;
+}
+.navbar_menu ul li:hover a{
+    color: white !important;
+}
+.first_hover_menu{
+    display :none;
+}
+
+.navbar_menu ul li:hover .first_hover_menu{
+    display: block;
+    position: absolute;
+    top: 53px;
+    min-width: 200px;
+    /* margin-left: -15px; */
+    background-color: white;
+}
+.navbar_menu ul li:hover .first_hover_menu ul{
+    display: block;
+}
+.navbar_menu ul li:hover .first_hover_menu ul li a{
+    color: black !important;
+}
+/* .navbar_menu ul li:hover .first_hover_menu ul li:hover, .navbar_menu ul li:hover .first_hover_menu ul li:hover a{
+    border-radius: 0 !important;
+    background-color: blue !important;
+    color: white !important;
+    padding-left: 10px;  
+} */
+
+.navbar_menu ul li:hover .first_hover_menu ul li:hover, .navbar_menu ul li:hover .first_hover_menu ul li:hover a{
+    border-radius: 0 !important;
+    background-color: blue !important;
+    color: white !important;
+    padding-left: 10px; 
+}
+
+
+
+.first_hover_menu .fa-angle-right{
+    float: right;
+    padding-right: 10px;
+}
+.second_hover_menu{
+    display: none;
+    
+}
+.hover_me:hover .second_hover_menu{
+    display: block;
+    position: absolute;
+    margin-left: 190px;
+    border: 1px solid black;
+    min-width: max-content;
+    background-color:  white;
+}
+.hover_me:hover .second_hover_menu ul li a{
+    background-color: transparent !important;
+}
