@@ -23,16 +23,15 @@
 /* navbar logo */
 
 .navbar_logo img{
-    border: 1px solid black;
-    margin-left: 25px;
     width: 200px;
-    height: 70px;
+    height: 60px;
+    margin: 0 0 0 25px;
 }
 
 /* navbar_menu */
 .navbar_menu{
-    
-    border: 1px solid black;
+    height: 60px;;
+    margin-left: 300px;
 }
 .navbar_menu ul {
     text-transform: capitalize;
@@ -40,7 +39,7 @@
     display: inline-flex; /* inline-flex*/
 }
 .navbar_menu ul li{
-    /* border: 1px solid black; */
+    margin: 10px 0px;
     padding:  5px 10px;
     border-radius: 100px;
 }
@@ -61,58 +60,127 @@
     background-color: blue;
 }
 .navbar_menu ul li:hover a{
-    color: white !important;
+    color: white ;
 }
 .first_hover_menu{
     display :none;
 }
-
 .navbar_menu ul li:hover .first_hover_menu{
     display: block;
     position: absolute;
-    top: 53px;
+    top: 55px;
     min-width: 200px;
-    /* margin-left: -15px; */
     background-color: white;
 }
 .navbar_menu ul li:hover .first_hover_menu ul{
     display: block;
 }
 .navbar_menu ul li:hover .first_hover_menu ul li a{
-    color: black !important;
+    color: black ;
 }
-/* .navbar_menu ul li:hover .first_hover_menu ul li:hover, .navbar_menu ul li:hover .first_hover_menu ul li:hover a{
+.first_hover_menu ul li:hover {
     border-radius: 0 !important;
-    background-color: blue !important;
-    color: white !important;
-    padding-left: 10px;  
-} */
-
-.navbar_menu ul li:hover .first_hover_menu ul li:hover, .navbar_menu ul li:hover .first_hover_menu ul li:hover a{
-    border-radius: 0 !important;
-    background-color: blue !important;
-    color: white !important;
+    background: blue ;
+    color: white ;
     padding-left: 10px; 
 }
-
-
-
+.navbar_menu ul li:hover .first_hover_menu ul li:hover a{
+    color: white ;
+    margin-left: 10px;
+}
 .first_hover_menu .fa-angle-right{
     float: right;
     padding-right: 10px;
 }
+
+/* css for 2nd menu */
 .second_hover_menu{
-    display: none;
-    
+    display: none;   
 }
 .hover_me:hover .second_hover_menu{
     display: block;
     position: absolute;
     margin-left: 190px;
-    border: 1px solid black;
     min-width: max-content;
     background-color:  white;
 }
-.hover_me:hover .second_hover_menu ul li a{
-    background-color: transparent !important;
+.navbar_menu ul li:hover .hover_me:hover .second_hover_menu ul li a{
+    color: black ;
+}
+.navbar_menu ul li:hover .hover_me:hover .second_hover_menu ul li:hover a{
+    color: white;
+    padding-left: 10px;
+}
+/* css for 3rd menu */
+.second_hover_menu .fa-angle-right{
+    float: right;
+    padding-right: 10px;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+.third_hover_menu{
+    display: none;
+}
+.second_hover:hover .third_hover_menu{
+    display: block;
+    position: absolute;
+    margin-left: 200px;
+    min-width: max-content;
+    background-color:  white;
+}
+.navbar_menu ul li:hover .hover_me:hover .second_hover_menu .second_hover:hover .third_hover_menu ul li a{
+    color: black ;
+}
+.navbar_menu ul li:hover .hover_me:hover .second_hover_menu .second_hover:hover .third_hover_menu ul li:hover a{
+    color: white;
+    padding-left: 20px;
+}
+
+
+/* Responsive  */
+@media screen and (max-width: 1276px){
+    .navbar_menu{
+        margin-left: 325px;
+    }
+}
+@media screen and (max-width: 1200px){
+    .navbar_menu{
+        margin-left: 250px;
+    }
+}
+@media screen and (max-width: 1125px){
+    .navbar_menu{
+        margin-left: 175px;
+    }
+}
+@media screen and (max-width: 1050px){
+    .navbar_menu{
+        margin-left: 105px;
+    }
+}
+@media screen and (max-width: 991px){
+    .navbar_menu{
+        width: 90%;
+        margin: 0 auto;
+        padding: 0 ;
+        height: auto;
+        font-size: 20px;
+    }
+    .navbar_menu ul {
+        display: block;
+        
+    }
+    .navbar_menu ul li{
+        padding-left: 60px;
+        border-radius:0px ;
+    }
+    
+    .fa-angle-down{
+        float: right;
+        padding: 0 20px;
+    }
+    .navbar_menu ul li:hover .first_hover_menu, .second_hover:hover .third_hover_menu, .hover_me:hover .second_hover_menu{
+        position: relative;
+        top: 0;
+    }
 }
